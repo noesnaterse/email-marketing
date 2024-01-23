@@ -1,0 +1,7 @@
+.idea
+.pyc
+__pycache__
+db.sqlite3
+production.py
+testing.py
+local.py

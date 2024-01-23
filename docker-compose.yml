@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  mailer-db:
+    image: mariadb
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: emailmarketing
+      MYSQL_USER: emailmarketing
+      MYSQL_PASSWORD: emailmarketing
+      MYSQL_ROOT_PASSWORD: 'password123'
+    volumes:
+      - db_data:/var/lib/mysql
+volumes:
+  db_data:

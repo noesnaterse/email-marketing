@@ -11,6 +11,9 @@ django = "^5.0.1"
 mysqlclient = "^2.2.1"
 
 
+[tool.poetry.group.dev.dependencies]
+factory-boy = "^3.3.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

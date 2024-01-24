@@ -14,11 +14,11 @@ class SignUpForm(UserCreationForm):
 
         self.fields["email"].widget.attrs["placeholder"] = "e-mail address"
         self.fields["email"].widget.attrs["class"] = "block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-        self.fields["email"].label_classes = ["block", "text-sm", "font-medium", "leading-6", "text-gray-900"]
-        # Bard wrote the following code
-        # email_field = self.fields["email"]
-        # email_field.label.attrs["class"] = "block text-sm font-medium leading-6 text-gray-900"
-        # self.fields["email"].widget.attrs[""]
+        self.fields["password1"].help_text = None  # FIX: Werkt niet? Waarom?
+        self.fields["password1"].widget.attrs["class"] = "block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        # self.fields["password2"].widget.attrs["placeholder"] = "e-mail address"
+        self.fields["password2"].widget.attrs["class"] = "block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+
 
 class LogInForm(forms.Form):
     email = forms.EmailField()

@@ -1,5 +1,0 @@
-Hier moet je zijn
-{% if widget.wrap_label %}
-    <label{% if widget.attrs.id %} for="{{ widget.attrs.id }}"{% endif %} class="{% for class in field.label_classes %}{{ class }}{% endfor %}">
-{% endif %}
-{% include "django/forms/widgets/input.html" %}{% if widget.wrap_label %} {{ widget.label }}</label>{% endif %}

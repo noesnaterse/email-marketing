@@ -1,0 +1,9 @@
+{% extends "forms/widgets/form.html" %}
+
+{% block field_email %}
+  <div class="mb-3">
+    <label for="{{ field.id }}" class="block font-medium text-gray-700 text-sm mb-1">{{ field.label }}</label>
+    {{ field.widget.render(name=field.name, value=field.value, attrs=field.widget.attrs) }}
+  </div>
+{% endblock field_email %}
+Deze misschien?

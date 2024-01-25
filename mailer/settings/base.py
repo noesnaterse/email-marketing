@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'crispy_tailwind',
     'tailwind',
     'django_browser_reload',
     'theme',
@@ -111,6 +113,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 TAILWIND_APP_NAME = 'theme'
+CRISPY_TEMPLATE_PACK = 'tailwind'
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'tailwind'
 
 MEDIA_URL = '/media/'
 STATIC_URL = '/theme/static/'

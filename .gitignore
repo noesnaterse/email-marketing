@@ -1,6 +1,7 @@
 .idea
 .pyc
 __pycache__
+node_modules
 db.sqlite3
 production.py
 testing.py

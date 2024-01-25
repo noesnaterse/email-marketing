@@ -1,13 +1,15 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Authentication system</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<!--  <script src="{% static 'bundle.css' %}"></script>-->
 </head>
 <body>
   {% block content %}
   {% endblock %}
+  <script src="{% static 'bundle.js' %}"></script>
 </body>
 </html>

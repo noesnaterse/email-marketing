@@ -29,7 +29,10 @@ def log_in(request):
             user = authenticate(email=email, password=password)
             if user:
                 login(request, user)
-                return redirect('home')
+                if user.profile.is_completed():
+                    return redirect('home')
+                else:
+                    return redirect(reverse('account:profile', kwargs={'pk': user.pk}))
             else:
                 error = True
     else:

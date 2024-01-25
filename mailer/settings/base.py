@@ -27,6 +27,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = []
 
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
 
 # Application definition
 
@@ -37,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tailwind',
+    'django_browser_reload',
+    'theme',
     'mailer',
     'account',
 ]
@@ -49,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_browser_reload.middleware.BrowserReloadMiddleware',
 ]
 
 AUTH_USER_MODEL = "account.User"
@@ -103,12 +110,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+TAILWIND_APP_NAME = 'theme'
+
 MEDIA_URL = '/media/'
-STATIC_URL = '/static/'
+STATIC_URL = '/theme/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'theme/static'),
 )
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'theme/static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
